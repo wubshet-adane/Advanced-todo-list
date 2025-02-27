@@ -1,8 +1,15 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: ;
+    background: linear-gradient(45deg, #5b27bd, #044c80c2, #1300bdbb, #4ac304c2);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    animation: gradient 15s linear infinite;
 }
 .container {
     max-width: 600px;
@@ -14,7 +21,14 @@ body {
 }
 h1 {
     text-align: center;
-    color: #333;
+    background: linear-gradient(45deg, #2751bd, #11ff00, #d900ff, #ff005d);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-bottom: 30px;
+    font-family: "Madimi One", serif;
+    font-weight: 600;
+    font-style: normal;
 }
 .inputAndAddTask{
     display:flex;
@@ -23,24 +37,31 @@ h1 {
 }
 input[type="text"] {
     flex: 1;
-    padding: 10px;
+    padding: 10px 20px;
     width: 80%;
     margin: 0;
     border: none;
     border-radius: 30px;
+    outline: none;
+    font-size: 16px;
 }
-button {
-    width: 150px;
-    padding: 20px;
+button#addTask {
+    width: fit-content;
+    padding: 12px 10px;
     background-color: #5c6bc0;
     color: white;
     border: none;
     border-radius: 30px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     cursor: pointer;
     outline: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: 600;
 }
-button:hover {
-    background-color: #3f4c8a;
+button#addTask:hover {
+    background-color: #020d48;
 }
 .task-list {
     list-style-type: none;
