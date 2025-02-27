@@ -106,3 +106,6 @@ button#addTask:hover {
 .task-item button.delete {
     background-color: #ff0000;
 }
+.task-item button.complete{
+    background-color: #32bd0c;
+}

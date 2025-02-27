@@ -21,7 +21,7 @@
                     <div>
                         <button class="edit" onclick="editTask(${index})">Edit</button>
                         <button class="delete"onclick="deleteTask(${index})">Delete</button>
-                        <button class="complete"onclick="toggleComplete(${index})">${task.completed ? 'Undo' : 'Complete'}</button>
+                        <button class="complete"onclick="toggleComplete(${index})">${task.completed ? 'Pending' : 'Done'}</button>
                     </div>
                 `;
                 taskList.appendChild(li);
