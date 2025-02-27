@@ -12,14 +12,16 @@
             tasks.forEach((task, index) => {
                 const li = document.createElement('li');
                 li.classList.add('task-item');
-                if (task.completed) li.classList.add('completed');
+                if (task.completed) {
+                    li.classList.add('completed');
+                }
                 
                 li.innerHTML = `
                     <span>${task.text}</span>
                     <div>
                         <button class="edit" onclick="editTask(${index})">Edit</button>
-                        <button onclick="deleteTask(${index})">Delete</button>
-                        <button onclick="toggleComplete(${index})">${task.completed ? 'Undo' : 'Complete'}</button>
+                        <button class="delete"onclick="deleteTask(${index})">Delete</button>
+                        <button class="complete"onclick="toggleComplete(${index})">${task.completed ? 'Undo' : 'Complete'}</button>
                     </div>
                 `;
                 taskList.appendChild(li);

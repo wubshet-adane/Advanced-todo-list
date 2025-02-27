@@ -64,9 +64,13 @@ button#addTask:hover {
     background-color: #020d48;
 }
 .task-list {
+    background-color: #f1fdf9a1;
+    border: 1px solid #878787;
+    border-radius: 10px;
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 1rem 0;
+    overflow-y: auto;
 }
 .task-item {
     display: flex;
@@ -75,12 +79,18 @@ button#addTask:hover {
     padding: 10px;
     margin: 5px 0;
     background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
+.task-item:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
 .task-item.completed {
-    background-color: #c8e6c9;
-    text-decoration: line-through;
-    color: #aaa;
+    background-color: #ffffff;
+    color: #32bd0c;
+}
+.task-item.completed:hover{
+    box-shadow: 0 2px 4px rgb(0, 255, 68);
 }
 .task-item button {
     background-color: #ff5252;
@@ -92,4 +102,7 @@ button#addTask:hover {
 }
 .task-item button.edit {
     background-color: #ffca28;
+}
+.task-item button.delete {
+    background-color: #ff0000;
 }
